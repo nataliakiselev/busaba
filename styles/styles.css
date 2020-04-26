@@ -1,0 +1,478 @@
+/* 1. Have you included normalize? 
+
+https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+
+*/
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: dinregular, sans-serif;
+  color: #fff;
+  background-color:#1d1d1b;
+  /* line-height should be done with a ratio only*/
+  line-height: 1.75em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* You MUST make sure that links stand out from nomal text though...*/
+}
+
+
+a:hover {
+    text-decoration: underline;
+  }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+p {
+  font-family: dinregular;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-family: dinbold;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-family: dinbold;
+}
+/* Because we us <ul>s for lists that we don't always want bulletted. */
+ul {
+  list-style: none;
+  
+}
+
+/* To make actual bulletted lists */
+ul.typographic {
+  list-style: initial;
+  padding-left: initial;
+}
+
+/* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* GRID */
+.container {
+margin: auto;
+}
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 90%;
+  }
+}
+/*@media (max-width: 999px) {
+  .container {display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ }
+}*/
+
+/* HEADER */
+.page-header  {
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%
+}
+
+.top-row {
+  display: flex;
+}
+
+.main-nav,
+.booking,
+.logo {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 990px) {
+.main-nav,
+.booking {
+  flex: 1 1 50%; 
+  }
+}
+
+@media (max-width: 989px){
+.logo {
+  order: -1;
+ }
+}
+
+@media (max-width: 989px) {
+  .main-nav {
+    display: none;
+  }
+  .top-row{
+  justify-content: space-around;
+  }
+}
+
+
+.logo {
+  width: 56px;
+  /* opacity: 1; */
+  margin: 0 20px;
+}
+
+.main-nav a {
+  padding: 25px 5px;
+  text-transform: uppercase;
+}
+
+.main-nav a:first-child {
+  padding-left: 15px;
+}
+.toggle-menu { 
+  color: inherit;
+}
+
+@media (min-width: 990px) {
+.toggle-menu {
+  display: none;
+}
+}
+
+.booking {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.booking li {
+  margin-right: 15px;
+}
+
+
+  
+/* PAGE */
+.main-header {
+  background: url(../images/2019/01/rsz_picture1-1920x1080.jpg) no-repeat center/cover;
+  width: 100%;
+ }
+
+ .main-header {
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 60px;
+}
+
+.main-header h1 {
+  font-size: 6.25rem;
+  margin-bottom: 1.25em;
+ }
+
+ .main-header h2 {
+  font-size: 3rem;
+  margin-bottom: 2.50em;
+ }
+ .ctas {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;
+   margin: 10px;
+ }
+ 
+ .ctas a {
+  min-width: 25%;
+ }
+
+ @media (max-width: 769px) {
+  .ctas a{
+   flex: 1 1 80%;
+   margin-bottom: 10px;
+  }
+  }
+
+/*Buttons*/
+ .btn {
+  color: #fff;
+  display: inline-block;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  font-family: dinbold;
+}
+
+ .btn.info {
+   background-color: #F6681C;
+   border: 1px solid #F6681C;
+   margin: 0px 15px;
+ }
+
+ .btn.secondary {
+  border: 1px solid #fff;
+  text-transform: uppercase;
+ }
+
+ /* SECTIONS */
+
+ .info .container {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+ }
+
+ .item {
+  background: #F6681C no-repeat center/cover;
+  /* flex-basis:33.333%; */
+  /* flex-grow: 1; */
+  width: calc(33% - 30px);
+  text-align: left;
+  padding: 1em 2em;
+  margin: 30px 15px 15px;
+ }
+
+ .item.menu {
+   background-image: url(../images/2019/09/DSC09684-new-768x768.jpg);
+ }  
+
+ .item.kingston {
+   background-image: url(../images/2019/06/IMG_6339-002-768x768.jpg);
+ }
+
+ .item.private {
+   background-image: url(../images/2019/05/group-eat-and-chat-768x768.jpg);
+ }
+
+ .item.signup {
+  flex-basis: 100%;
+  background-image: url(../images/newsletter-image.jpg);
+}
+.item.signup {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.item.signup .propmt, 
+.item.signup .form {
+  width: 50%;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  margin: 30px 15px 15px;
+  width: calc(30% - 30px);
+}
+.form-row:nth-last-child(2) {
+  margin-right: 0;
+}
+
+.form-row.consent {
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+
+.consent input {
+  align-self: center;
+  margin-right: 5px;
+}
+.form-row input {
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 16px 20px;
+  margin-right: 0;
+}
+
+input::placeholder {
+  color: #fff;
+  text-align: left;
+  font-family: dinregular, sans-serif;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.signup.btn {
+  color: #1d1d1b;
+  background-color: #fff;
+  font-family: dinbold;
+  text-transform: uppercase;
+  border: #fff; 
+  padding: 16px 21px;
+  font-size: 1.4rem;
+}
+
+.food {
+  background: #F6681C no-repeat center/cover;
+}
+.food .container {
+  padding: 30px 15px;
+  text-align: center; 
+}
+
+.philosophy {
+  background: url(../images/block-pattern.png) repeat center;
+}
+.philosophy .container {
+  display: flex;
+  justify-content: space-around;
+}
+.text {
+  width: 45%;
+}
+.buddha {
+  width: 55%;
+  margin-right: -70px; 
+  height: 100%;
+}
+
+.text {
+  text-align: left;
+  padding: 30px 0px 0px;
+  /* font-family: dinregular; */
+}
+
+.buddha img{
+  opacity: 0.5;
+  width: 100%;
+  object-fit: cover;  
+ 
+}
+.text .btn {
+  background-color: #F6681C;
+  margin: 15px 0px 10px;
+}
+
+.promos .container {
+  display: flex;  
+  flex-flow: row wrap;  
+  justify-content: space-between;
+}
+.promos {
+  background: #F6681C;
+}
+.promo {
+  width: calc(25% - 30px);
+  flex-grow: 2;
+  padding: 4em 3.5em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 30px 15px; 
+}
+
+.promo a{
+  font-family: dinbold;
+  font-size: 2.4rem;
+  text-align: center
+}
+.offers {
+  background-image: url(../images/2018/06/kids-eating-noodles.jpg)
+}
+
+.events{
+  background-image: url(../images/2018/06/bar-flowers-compressed.jpg)
+}
+
+.promo.menu {
+  background-image: url(../images/2018/06/busaba-westfield-stratford-city-tamarind-duck-breast-768x768.jpg)
+}
+
+.locations {
+  background-image: url(../images/2018/06/busaba-leicester-square-interior-768x768.jpg)
+}
+
+.page-footer {
+  background: url(../images/block-pattern.png) repeat center;
+}
+
+.page-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside,
+.social,
+.copyright {
+  width: 33.333%;
+}
+.aside {
+ display: flex;
+  flex-direction: column;
+}
+.aside ul {
+  padding: 10px 15px;
+  font-size: 1.3rem;
+}
+.useful {
+  display: flex;
+  flex-direction: row;
+}
+.useful li {
+  width: calc(20% - 20px);
+  margin: 0 20px;
+}
+
+.useful li:first-child {
+  margin-left: 0;
+}
+
+ .reports,
+ .useful {
+  margin: 0;
+  padding: 5px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social li{
+  /* padding: 10px;  */
+  width: 30px
+}
+
+p.copyright {
+  text-align: right;
+}
