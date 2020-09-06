@@ -1,3 +1,3 @@
-A CSS practice, with use of flexbox: visual copy of busaba.com using provided assets and HTML
+A CSS student practice, demonstrarting use of flexbox and media queries: visual copy of busaba.co. No JS.
 
 ### ✨ [Demo](https://nataliakiselev.github.io/busaba)
